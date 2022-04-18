@@ -48,6 +48,7 @@ function powerrcatt
   param(
     [alias("Client")][string]$c="",
     [alias("Listen")][switch]$l=$False,
+    ...
 ```
 Updated script:
 ```
@@ -56,6 +57,7 @@ function powerrrrcat
   param(
     [alias("Client")][string]$c="",
     [alias("Listen")][switch]$l=$False,
+    ...
 ```
 
 Make sure that you update the powershell command from earlier to reflect these changes:
