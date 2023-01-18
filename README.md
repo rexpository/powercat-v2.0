@@ -11,8 +11,8 @@ Powercat is essentially the powershell version of netcat. It is a network utilit
 # Usage
 Clone this repository and change the working directory
 ```
-git clone https://github.com/rexpository/reverseshell-powercat-v2.git
-cd reverseshell-powercat-v2
+git clone https://github.com/rexpository/powercat-v2.0.git
+cd powercat-v2.0
 ```
 
 Start a Python HTTP server on a port of your choice (e.g., 70) for the victim to access the script
